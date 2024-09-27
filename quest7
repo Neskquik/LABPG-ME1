@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class PrecoComDesconto {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite o preço do produto:");
+        double preco = sc.nextDouble();
+        double precoFinal = preco;
+
+        if (preco > 100) {
+            precoFinal = preco * 0.90; // Desconto de 10%
+        } else if (preco >= 50) {
+            precoFinal = preco * 0.95; // Desconto de 5%
+        }
+
+        System.out.printf("Preço final: R$%.2f\n", precoFinal);
+
+        sc.close();
+    }
+}
